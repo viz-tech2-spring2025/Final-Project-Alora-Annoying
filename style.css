@@ -477,7 +477,19 @@ section {
   font-weight: bold;
 }
 
+/* VIZ大圆第一屏 */
+
 .sixth-section {
+  height: 100vh;
+  padding: 40px;
+  background-color: #21221D;
+  display: flex;
+  align-items: center;
+}
+
+/* CHART开始的第一屏 */
+
+.seventh-section {
   height: 100vh;
   padding: 40px;
   background-color: #21221D;
