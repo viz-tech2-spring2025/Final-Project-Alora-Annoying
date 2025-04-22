@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sections[index].scrollIntoView({ behavior: 'smooth' })
     updateDots(index)
     if (activationFunctions[index]) {
-      activationFunctions[index]() // 调用对应 draw 函数
+      activationFunctions[index]()
     }
   }
 

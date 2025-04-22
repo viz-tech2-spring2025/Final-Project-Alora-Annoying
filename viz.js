@@ -155,18 +155,6 @@ d3.csv("./public/dataset.csv").then(data => {
           tooltip.style("display", "none");
         });
 
-        // ❤️新添加的：
-        if (["Behaviour", "Demographic", "Physiological"].includes(comp)) {
-          d3.select("body").append("div")
-            .attr("id", `circle-${leaf.data.name.replace(/\s+/g, "_")}`)
-            .style("position", "absolute")
-            .style("width", "0px")  // 不可见，仅用于记录位置
-            .style("height", "0px")
-            .style("left", (position.x + leaf.x) + "px")
-            .style("top", (position.y + leaf.y) + "px")
-            .attr("data-name", leaf.data.name);
-        }
-
       });
 
       const pathId = `arc-${groupName.replace(/\s+/g, '-')}`;

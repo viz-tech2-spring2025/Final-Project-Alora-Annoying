@@ -20,18 +20,18 @@ const boxContents = {
   }
 }
 
-// 为每个方块添加鼠标悬停事件
+// square-box hover events
 squareBoxes.forEach(box => {
   box.addEventListener('click', function () {
     const boxId = this.getAttribute('data-id')
     const content = boxContents[boxId]
     const infoHint = document.querySelector('.info-hint')
-    infoHint.style.display = 'none' // 隐藏提示文本
-    // 更新长方形区域的内容
+    infoHint.style.display = 'none' // hide text
+    // renew content in long-box
     infoImage.innerHTML = `<img src="${content.image}" alt="${boxId} example">`
-    infoText.innerHTML = `<p style="font-size:12px;">${content.text}</p>` // 设置字体大小为16px
+    infoText.innerHTML = `<p style="font-size:12px;">${content.text}</p>` // font-size temporary 16px
 
-    // 添加激活状态
+    // active status
     infoDisplay.classList.add('active')
     this.classList.add('active-box')
   })
