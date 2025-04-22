@@ -399,6 +399,12 @@ section {
   padding: 20px;
 }
 
+.left-content-special {
+  flex: 2;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .right-content {
   flex: 3;
   padding: 20px;
@@ -486,6 +492,12 @@ section {
   display: flex;
   align-items: center;
 }
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
 
 /* CHART开始的第一屏 */
 

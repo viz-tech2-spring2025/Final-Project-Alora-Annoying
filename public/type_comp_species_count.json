@@ -1,0 +1,74 @@
+{
+  "Drought": [
+    {
+      "comp": "Behaviour",
+      "count": 1
+    },
+    {
+      "comp": "Demographic",
+      "count": 3
+    },
+    {
+      "comp": "Physiological",
+      "count": 22
+    }
+  ],
+  "Flood": [
+    {
+      "comp": "Behaviour",
+      "count": 3
+    },
+    {
+      "comp": "Demographic",
+      "count": 4
+    },
+    {
+      "comp": "Physiological",
+      "count": 4
+    }
+  ],
+  "Rain": [
+    {
+      "comp": "Demographic",
+      "count": 2
+    }
+  ],
+  "Storms": [
+    {
+      "comp": "Behaviour",
+      "count": 11
+    },
+    {
+      "comp": "Demographic",
+      "count": 80
+    }
+  ],
+  "Temperature": [
+    {
+      "comp": "Behaviour",
+      "count": 1
+    },
+    {
+      "comp": "Demographic",
+      "count": 20
+    },
+    {
+      "comp": "Physiological",
+      "count": 33
+    }
+  ],
+  "Wind": [
+    {
+      "comp": "Behaviour",
+      "count": 2
+    },
+    {
+      "comp": "Demographic",
+      "count": 2
+    },
+    {
+      "comp": "Physiological",
+      "count": 2
+    }
+  ]
+}
