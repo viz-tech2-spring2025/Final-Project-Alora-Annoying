@@ -1,3 +1,6 @@
+// 😀
+// window.initialPositions = {};
+
 function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
   const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
   return {
@@ -154,6 +157,15 @@ d3.csv("./public/dataset.csv").then(data => {
         .on("mouseout", function () {
           tooltip.style("display", "none");
         });
+
+        // 😀
+        // if (["Behaviour", "Demographic", "Physiological"].includes(comp)) {
+        //   const key = leaf.data.name;
+        //   window.initialPositions[key] = {
+        //     x: leaf.x + translateX,
+        //     y: leaf.y + translateY
+        //   };
+        // }
 
       });
 

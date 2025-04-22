@@ -12,6 +12,9 @@ const compColorMap = {
   Physiological: "#EE5EBE"
 };
 
+// 😀
+// window.finalPositions = {};
+
 d3.csv("./public/dataset.csv").then(rawData => {
   const filtered = rawData.filter(d => ["Behaviour", "Demographic", "Physiological"].includes(d.CompMech));
   const typeCompGroups = d3.groups(filtered, d => d.Type, d => d.CompMech);
@@ -81,6 +84,12 @@ d3.csv("./public/dataset.csv").then(rawData => {
     .append("circle")
     .attr("class", "circle")
     .attr("cx", d => labelToCircleGap + d.x * (circleRadius * 2 + circleMargin))
+    // .attr("cx", d => {
+    //   const x = labelToCircleGap + d.x * (circleRadius * 2 + circleMargin);
+    //   const y = typeScale(d.type) + d.y * (circleRadius * 2 + circleMargin);
+    //   window.finalPositions[d.binomial] = { x, y };
+    //   return x;
+    // })😀
     .attr("cy", d => typeScale(d.type) + d.y * (circleRadius * 2 + circleMargin))
     .attr("r", circleRadius)
     .attr("fill", d => d.color)

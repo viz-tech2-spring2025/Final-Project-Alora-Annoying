@@ -1,3 +1,5 @@
+// import { bindTransitionScroll } from './transition.js';  😀
+
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section')
   const dots = document.querySelectorAll('.dot')
@@ -55,4 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToSection(currentSection - 1)
     }
   })
+
+//   bindTransitionScroll();  😀
 })
