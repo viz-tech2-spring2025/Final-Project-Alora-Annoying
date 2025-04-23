@@ -39,7 +39,7 @@ squareBoxes.forEach(box => {
     
     // Update content
     infoImage.innerHTML = `<img src="${content.image}" alt="${boxId} example">`;
-    infoText.innerHTML = `<p style="font-size:12px;">${content.text}</p>`;
+    infoText.innerHTML = `<p style="font-size:16px;">${content.text}</p>`;
     
     // Clear all active states and set active state only on clicked box
     clearActiveBoxes();

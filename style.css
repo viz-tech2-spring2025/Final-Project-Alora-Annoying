@@ -301,6 +301,9 @@ section {
   z-index: 1;
 }
 
+.number-image {
+  width: 350px;
+}
 
 .content-container {
   display: flex;
@@ -400,7 +403,7 @@ section {
 
 .global-image {
   /* max-width: 100%; */
-  width: 1000px;
+  width: 1100px;
   height: auto;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
@@ -564,7 +567,7 @@ section {
 .legend-image {
   position: absolute;
   width: 170px;
-  bottom: -250px;
+  bottom: -300px;
   right: -1200px;
 }
 
