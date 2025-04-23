@@ -1,0 +1,75 @@
+/* transition-styles.css */
+
+/* Ensure sections have proper stacking and smooth opacity transitions */
+.sections-container section {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  /* Style for the global tooltip used by both visualizations */
+  .global-tooltip {
+    position: absolute;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    max-width: 250px;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Style for the transition container that holds animating circles */
+  #transition-circles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  /* Style for the species circles in viz1 */
+  .species-circle {
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+  }
+  
+  /* Style for the group elements in viz1 */
+  .group-circle, 
+  .group-label-path, 
+  .group-label-text {
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Style for the type labels in viz2 */
+  .type-label {
+    transition: opacity 0.8s ease;
+  }
+  
+  /* Style for the circles in viz2 */
+  .viz2-svg .circle {
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+  }
+  
+  /* Animation for transition circles */
+  .transition-circle {
+    stroke-width: 0.5;
+    stroke: #fff;
+    pointer-events: none;
+  }
+  
+  /* Special styling for currently transitioning section */
+  .transitioning-section {
+    overflow: visible !important; /* Allow circles to move outside section boundaries */
+  }
+  
+  /* Ensure viz SVGs take up full space */
+  .viz1-svg, .viz2-svg {
+    width: 100%;
+    height: 100%;
+  }

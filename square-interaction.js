@@ -1,8 +1,8 @@
-// 方块悬停交互功能
-const squareBoxes = document.querySelectorAll('.square-box')
-const infoDisplay = document.getElementById('info-display')
-const infoImage = document.querySelector('.info-image')
-const infoText = document.querySelector('.info-text')
+// Modified square-interaction.js
+const squareBoxes = document.querySelectorAll('.square-box');
+const infoDisplay = document.getElementById('info-display');
+const infoImage = document.querySelector('.info-image');
+const infoText = document.querySelector('.info-text');
 
 // Example Box Content
 const boxContents = {
@@ -20,19 +20,32 @@ const boxContents = {
   }
 }
 
-// square-box hover events
-squareBoxes.forEach(box => {
-  box.addEventListener('click', function () {
-    const boxId = this.getAttribute('data-id')
-    const content = boxContents[boxId]
-    const infoHint = document.querySelector('.info-hint')
-    infoHint.style.display = 'none' // hide text
-    // renew content in long-box
-    infoImage.innerHTML = `<img src="${content.image}" alt="${boxId} example">`
-    infoText.innerHTML = `<p style="font-size:12px;">${content.text}</p>` // font-size temporary 16px
+// Function to clear active state from all boxes
+function clearActiveBoxes() {
+  squareBoxes.forEach(box => {
+    box.classList.remove('active-box');
+  });
+}
 
-    // active status
-    infoDisplay.classList.add('active')
-    this.classList.add('active-box')
-  })
-})
+// For each square box, add click event
+squareBoxes.forEach(box => {
+  box.addEventListener('click', function() {
+    const boxId = this.getAttribute('data-id');
+    const content = boxContents[boxId];
+    const infoHint = document.querySelector('.info-hint');
+    
+    // Hide the hint text
+    infoHint.style.display = 'none';
+    
+    // Update content
+    infoImage.innerHTML = `<img src="${content.image}" alt="${boxId} example">`;
+    infoText.innerHTML = `<p style="font-size:12px;">${content.text}</p>`;
+    
+    // Clear all active states and set active state only on clicked box
+    clearActiveBoxes();
+    this.classList.add('active-box');
+    
+    // Add active state to the info display
+    infoDisplay.classList.add('active');
+  });
+});

@@ -85,7 +85,8 @@
           <div class="circle"></div>
           <span>= 1 reported EWE that impact ecosystem</span>
         </div>
-        <img src="/pic/Frame 46.png" alt="Disaster statistics" class="frame-img" />
+        <!-- <img src="/pic/Frame 46.png" alt="Disaster statistics" class="frame-img" /> -->
+        <div id="ewe-chart" class="frame-img"></div>
         <p>
           Overall, the increasing number of ecosystem impacts of extreme weather events being surveyed is partly a sign
           of the growing attention of scholars in this issue, but it does not diminish the ecosystem impacts caused by
@@ -94,7 +95,7 @@
       </div>
     </section>
 
-    <section class="fifth-section" id="section5-2">
+    <section class="sixth-section" id="section6">
       <div class="left-content">
         <h2>
           Resilience: How Species Respond to Natural Disasters
@@ -134,26 +135,37 @@
       </div>
     </section>
 
-    <section class="sixth-section" id="section6">
-      <div class="left-content">
+    <section class="seventh-section" id="section7">
+      <div class="left-content-special">
         <p>
-          Under the influence of these extreme weather events, species and plant life closely linked to human well-being
-          have also been significantly affected. These disruptions not only threaten biodiversity but may also have
-          cascading effects on ecosystems and the resources humans depend on.
+          All kinds of species in nature are affected by extreme weather events (EWEs), and in this dataset, BIRDS are the most recorded.
         </p>
+      </div>
+      <div class="right-content">
+        <div id="species-images"></div>
+      </div>
+    </section>
+
+    <section class="eighth-section" id="section8">
+      <div class="left-content-special">
+        <p>
+          Different species tend to adopt different types of compensations in response to extreme weather events (EWEs).
+        </p>
+        <img src="./pic/legend.png" alt="legend" class="legend-image">
       </div>
       <div class="right-content">
         <div id="viz"></div>
       </div>
     </section>
 
-    <section class="seventh-section" id="section7">
-      <div class="left-content">
+    <section class="ninth-section" id="section9">
+      <div class="left-content-special">
         <p>
           Under the influence of these extreme weather events, species and plant life closely linked to human well-being
           have also been significantly affected. These disruptions not only threaten biodiversity but may also have
           cascading effects on ecosystems and the resources humans depend on.
         </p>
+        <img src="./pic/legend.png" alt="legend" class="legend-image">
       </div>
       <div class="right-content">
         <div id="chart"></div>
@@ -175,13 +187,14 @@
   </div>
 
   <!-- <script src="./scroller.js"></script> -->
-  <script src="index.js"></script>
-  <script src="./square-interaction.js"></script>
-
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script type="module" src="./viz.js"></script>
-  <script type="module" src="./chart.js"></script>
-  <!-- <script src="./transition.js"></script> -->
-</body>
+  <script type="module" src="./chart.js" defer></script>
+  <script src="./transition.js" defer></script>
 
+  <script src="./index.js"></script>
+  <script src="./square-interaction.js"></script>
+  <script src="./ewe-chart.js"></script>
+  <script src="./species-images.js"></script>
+</body>
 </html>

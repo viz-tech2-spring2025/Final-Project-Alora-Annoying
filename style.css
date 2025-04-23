@@ -165,6 +165,15 @@ h2 {
   color: #21221D;
 }
 
+/* active square-box */
+.square-box.active-box::before {
+  background-color: #77b3f3;
+}
+
+.square-box.active-box {
+  color: #21221D;
+}
+
 
 .page-transition {
   position: fixed;
@@ -292,15 +301,17 @@ section {
   z-index: 1;
 }
 
+
 .content-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Changed from center to space-between */
   align-items: center;
   height: 100%;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  gap: 40px; /* Added explicit gap between elements */
 }
 
 .text-section {
@@ -311,7 +322,7 @@ section {
 }
 
 .image-section {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,14 +399,15 @@ section {
 }
 
 .global-image {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 1000px;
   height: auto;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
 
 .left-content {
-  flex: 2;
+  flex: 1;
   padding: 20px;
 }
 
@@ -403,10 +415,13 @@ section {
   flex: 2;
   padding: 0px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .right-content {
-  flex: 3;
+  flex: 2;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -437,10 +452,10 @@ section {
   margin-right: 10px;
 }
 
-.frame-img {
+/* .frame-img {
   max-width: 100%;
   margin: 20px 0;
-}
+} */
 
 /* 第五个 section */
 .fifth-section {
@@ -450,6 +465,32 @@ section {
   display: flex;
   align-items: center;
 }
+
+
+/* Styles for the EWE chart */
+#ewe-chart {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+#ewe-chart svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the indicator circle that matches the chart circles */
+.indicator .circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #77B3F3 0%, #99A0FF 100%);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
 
 .box-container {
   display: flex;
@@ -471,6 +512,7 @@ section {
   font-weight: bold;
 }
 
+
 .long-box {
   width: 100%;
   padding: 30px;
@@ -481,6 +523,16 @@ section {
   justify-content: center;
   text-align: center;
   font-weight: bold;
+}
+
+.info-hint {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 /* VIZ大圆第一屏 */
@@ -501,7 +553,7 @@ section {
 
 /* CHART开始的第一屏 */
 
-.seventh-section {
+.seventh-section, .eighth-section, .ninth-section {
   height: 100vh;
   padding: 40px;
   background-color: #21221D;
@@ -509,10 +561,104 @@ section {
   align-items: center;
 }
 
-.transition-overlay {
+.legend-image {
   position: absolute;
+  width: 170px;
+  bottom: -250px;
+  right: -1200px;
+}
+
+/* 确保 SVG 圆圈的悬停效果正常显示 */
+.species-circle:hover,
+svg .circle:hover {
+  stroke: #ffffff !important;
+  stroke-width: 2px !important;
+  stroke-opacity: 1 !important;
+}
+
+/* 全局工具提示样式 */
+.global-tooltip {
+  position: absolute;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 12px;
+  z-index: 10000;
+}
+
+/* 确保所有SVG元素能正确接收鼠标事件 */
+svg * {
+  pointer-events: all;
+}
+
+/* Species-images */
+/* CSS for the species images visualization */
+
+/* Main container styles */
+#species-images {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* SVG container styles */
+.viz0-svg {
+  overflow: visible;
+  display: block;
+  margin: 0 auto; /* optional: 居中 */
+}
+
+
+/* Group styles */
+.species-group-image {
+  transition: opacity 0.8s ease;
+}
+
+/* Group circle styles */
+.group-circle-image {
+  fill: white;
+  fill-opacity: 0.05;
+  stroke: #aaa;
+  stroke-opacity: 0.3;
+  transition: fill 0.8s ease, fill-opacity 0.8s ease, stroke 0.8s ease, stroke-opacity 0.8s ease;
+}
+
+/* Group label text styles (centered) */
+.group-label-text-centered {
+  fill: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+/* Section transition styles */
+.seventh-section, .eighth-section, .ninth-section {
+  transition: opacity 0.8s ease;
+}
+
+/* Ensure images are properly masked by their circles */
+image.species-group-image {
+  pointer-events: none;
+}
+
+/* Transition container styles */
+#transition-circles-container {
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 9999;
 }
+
+/* Hide elements during transitions */
+.section-transitioning {
+  visibility: hidden;
+  opacity: 0;
+}
+
