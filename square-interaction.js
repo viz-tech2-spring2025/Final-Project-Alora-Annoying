@@ -8,15 +8,15 @@ const infoText = document.querySelector('.info-text');
 const boxContents = {
   box1: {
     image: '/pic/image 27.png',
-    text: 'Animal loss refers to the decline in animal populations due to human activities. This includes extinction of species and reduction in population numbers, which can disrupt ecosystems and food chains.'
+    text: 'Pied babblers increase cooperative breeding efforts post-drought, with groups ≥6 members achieving 2.3× higher fledgling success through load-lightening and sentinel behavior. '
   },
   box2: {
-    image: '/pic/image 27.png',
-    text: 'Habitat loss occurs when natural environments are destroyed or altered, making them unsuitable for the species that depend on them. This is primarily caused by deforestation, urbanization, and agriculture expansion.'
+    image: '/pic/florida scrub-jay.png',
+    text: 'After a drought that reduced juvenile survival rates, the population showed increased adult survival and delayed dispersal of young. This adjustment helped stabilize population numbers despite fewer young birds surviving the initial stages'
   },
   box3: {
-    image: '/pic/image 27.png',
-    text: 'Biodiversity loss refers to the reduction in variety of living species in an ecosystem. This decreases ecosystem resilience and impacts ecosystem services that humans rely on, including clean air, water, and food security.'
+    image: '/pic/Amargosa River Pupfish.png',
+    text: '​The Amargosa River pupfish (Cyprinodon nevadensis amargosae) exhibits physiological compensation to survive in extreme desert conditions. In habitats like Tecopa Bore, where water temperatures can exceed 36°C, these fish have developed adaptations such as reduced body size and altered morphology, including the loss of pelvic fins, to cope with thermal stress . Additionally, they display phenotypic plasticity, allowing developmental changes in response to environmental conditions, which helps maintain homeostasis and reproductive success in fluctuating habitats.​'
   }
 }
 
