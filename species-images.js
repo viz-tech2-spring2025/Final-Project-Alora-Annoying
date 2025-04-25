@@ -14,7 +14,7 @@ d3.csv("./public/dataset.csv").then(data => {
   console.log("Species images visualization loaded");
   const groupsData = d3.group(data, d => d.SpeciesGrouped);
   
-  // Same position map as in viz.js - MUST be identical
+  // Same position map as in viz.js
   const groupPositionMap = {
     "Birds": { x: 945, y: 495 },
     "Plantae": { x: 230, y: 665 },
@@ -38,7 +38,7 @@ d3.csv("./public/dataset.csv").then(data => {
     .attr("height", window.innerHeight)
     .attr("class", "viz0-svg");
 
-  // Process each species group - USING EXACTLY THE SAME LAYOUT CALCULATIONS AS VIZ.JS
+  // Process each species group
   groupsData.forEach((records, groupName) => {
     console.log(`Processing species group for images: ${groupName}`);
     

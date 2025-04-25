@@ -300,12 +300,12 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     else if (currentSection === 7 && index === 8) {
-      // Scrolling from section8 to section9 - use custom transition
+      // same as previous
       handleSpecialTransition(7, 8, false);
       return;
     } 
     else if (currentSection === 8 && index === 7) {
-      // Scrolling from section9 back to section8 - use reverse transition
+      // same as previous
       handleSpecialTransition(8, 7, true);
       return;
     }

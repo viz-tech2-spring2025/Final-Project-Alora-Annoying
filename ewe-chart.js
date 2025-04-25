@@ -1,6 +1,5 @@
 // ewe-chart.js
-// This script creates a visualization of EWE studies from 2001-2017
-// using circles to represent each study
+// This script creates a visualization of EWE studies from 2001-2017 using circles to represent each study
 
 document.addEventListener('DOMContentLoaded', function() {
     // Set the dimensions for the chart
