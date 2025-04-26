@@ -131,7 +131,8 @@ d3.csv("./public/dataset.csv").then(data => {
       .attr("width", root.r * 2)
       .attr("height", root.r * 2)
       .attr("clip-path", `url(#${clipId})`)
-      .attr("xlink:href", `./pic/species-images/${imageName}.png`)
+      // .attr("xlink:href", `./pic/species-images/${imageName}.png`)
+      .attr("xlink:href", `/Final-Project-Alora-Ecosystems/pic/species-images/${imageName}.png`)
       .attr("preserveAspectRatio", "xMidYMid slice")
       .attr("class", "species-group-image");
     
